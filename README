@@ -1,0 +1,11 @@
+FrugalShopper A slow food shopping utility for creating lists, researching prices calculating nutritional data
+
+Currently in inital stages
+
+This repository is for personal development at this time.
+
+Tools include Asp.Net MVC 4, PostgreSQL, google maps api and google places.  
+
+Pricing data compiled with ScreenScraper.
+
+Nutritional data from USDA.
