@@ -1,4 +1,4 @@
-REATE TABLE locations
+CREATE TABLE locations
 (
    id serial, 
    user_id integer NOT NULL, 

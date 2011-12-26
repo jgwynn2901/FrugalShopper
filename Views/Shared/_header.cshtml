@@ -1,0 +1,35 @@
+﻿<div id="header">
+    <div id="title">
+        <img src="../../Content/images/cart-icon64.png"/>
+        <h2>the Frugal Shopper</h2>
+    </div>
+    <div id="topnav">
+        <!-- start: skip link navigation -->
+        <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
+        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
+        <!-- end: skip link navigation --><a href="#">Login</a> | <a href="#">Contact</a> | <a href="#">Imprint</a>
+    </div>
+</div>
+<div id="nav">
+    <!-- skiplink anchor: navigation -->
+    <a id="navigation" name="navigation"></a>
+    <div id="tabs">
+        <!-- main navigation: horizontal list -->
+        <ul>
+            <li><a href="#" title="Home" class="selected"><span>Home</span></a></li>
+            <li><a href="#" title="Tab 2"><span>Tab 2</span></a></li>
+            <li><a href="#" title="Tab 3"><span>Tab 3</span></a></li>
+            <li><a href="#" title="Tab 4"><span>Tab 4</span></a></li>
+            <li><a href="#" title="Tab 5"><span>Tab 5</span></a></li>
+        </ul>
+    </div>
+    <div id="searchBar">
+        @using (Html.BeginForm("Details", "Home", FormMethod.Get)) {
+            <fieldset>
+                <input type="text" id="address" name="address" placeholder="Address"/>
+                <button type="submit">Search</button>
+            </fieldset>
+        }
+</div>
+</div>
+ 

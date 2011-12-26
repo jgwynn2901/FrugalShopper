@@ -16,6 +16,5 @@ namespace FrugalShopper.Models
     public class Locations : DynamicModel
     {
         public Locations() : base("shopper", "locations", "id") { }
-
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Google.Api.Maps.Service.Geocoding;
+using Google.Api.Maps.Service.Places;
 using Google.Api.Maps.Service;
 using FrugalShopper.Models;
 
@@ -37,9 +38,25 @@ namespace FrugalShopper.Controllers
                     };
 
                 location.Id = UserRepository.Insert(location);
-                return Json(location, JsonRequestBehavior.AllowGet);
+                return GetPlacesDetails(location);
             }
             return View("Index");
+        }
+
+        private ActionResult GetPlacesDetails(Location location)
+        {
+            var request = new PlacesRequest
+            {
+                Key = "AIzaSyByhdOHNBYP9woiCoiV_HxpbiOIR34V_mY",
+                Latitude = location.Latitude.ToString(),
+                Longitude = location.Longitude.ToString(),
+                Radius = 500,
+                Sensor = "false"
+            };
+            request.Types.Add("food");
+
+            var response = PlacesService.GetResponse(request);
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
 
         //
